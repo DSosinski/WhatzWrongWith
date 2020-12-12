@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL = ""
 languageCode = "en-us"
-title = "Liva | Personal blog template"
+title = "Whatz Wrong With | Very Subjective Opinions"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
@@ -86,9 +86,9 @@ author = "Themefisher"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 # Contact Information
-mobile = "0124857985320"
-email = "demo@email.com"
-location = "Dhaka, Bangladedsh"
+# mobile = "0124857985320"
+email = "DSosinski@gmail.com"
+location = "London, UKx"
 # copyright
 copyright = "| copyright &copy; 2020 [Themefisher](https://themefisher.com) All Rights Reserved |"
 
