@@ -10,7 +10,7 @@ image: "images/author.jpg"
 description: "this is meta description"
 
 # type
-type : "about"
+type : "course"
 ---
 
 This is my first page

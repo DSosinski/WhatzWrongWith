@@ -20,7 +20,7 @@ tags:
   - "New"
 
 # post type
-type: "post"
+type: "course"
 ---
 
 # Heading 1
