@@ -85,7 +85,22 @@
        
       };
 
-  loader.load(chatbotUiConfig)
-    .catch(function (error) { console.error(error); });
+      // load the iframe
+      loader.load(chatbotUiConfig)
+        .then(function () {
+           // at this point the API is available
+           // so I can send a ping to the iframe
+           loader.api.ping();
+
+          // perform actions on the parent dependent on the chatbot
+          // loading. For example, enable the send button once the
+          // chatbot UI is loaded
+          $('#send-intent').prop('disabled', false);
+
+        })
+        .catch(function (error) {
+          console.error('chatbot UI failed to load', error);
+        });
+    
 </script>
 {{ end }}
