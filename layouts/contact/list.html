@@ -57,50 +57,11 @@
     </div>
   </div>
 </section>
-<script src="https://d2um70ufr4wbsl.cloudfront.net/lex-web-ui-loader.min.js"></script>
-<script>
-  var loaderOpts = {
-    baseUrl: 'https://d2um70ufr4wbsl.cloudfront.net/',
-    shouldLoadMinDeps: true
-  };
-  var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
-  
-  var chatbotUiConfig = {
-      // if the iframe page is hosted on a different site,
-      // you should configure the parentOrigin and iframeOrigin
-    ui: {
-          // origin of the parent site where you are including the chatbot UI
-          parentOrigin: 'https://master.d31l63zj7ey1hm.amplifyapp.com'
-        },
-        iframe: {
-          // origin hosting the HTML file that will be embedded in the iframe
-         iframeOrigin: 'https://d2um70ufr4wbsl.cloudfront.net'
-        },
-        lex: {
-            sessionAttributes: {
-              userAgent: navigator.userAgent,
-              QNAClientFilter: ''
-            }
-          }
-       
-      };
-
-      // load the iframe
-      loader.load(chatbotUiConfig)
-        .then(function () {
-           // at this point the API is available
-           // so I can send a ping to the iframe
-           loader.api.ping();
-
-          // perform actions on the parent dependent on the chatbot
-          // loading. For example, enable the send button once the
-          // chatbot UI is loaded
-          $('#send-intent').prop('disabled', false);
-
-        })
-        .catch(function (error) {
-          console.error('chatbot UI failed to load', error);
-        });
-    
-</script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Chatbot_DS_01"
+  agent-id="a9f03187-3bc5-4b38-8923-fce77a592abf"
+  language-code="en"
+></df-messenger>
 {{ end }}
